@@ -2,9 +2,10 @@ import sys
 from datetime import datetime
 from time import sleep
 import boto3
+import os
 
-db_path = "/home/aerotract/.sandbox/companydb.db"
-bucket = "companydb-backups"
+db_path = os.getenv("DB_DEV_DIR") + "/" + os.getenv("DB_NAME")
+bucket = os.getenv("DB_S3_BACKUP_BUCKET")
 
 def upload_db_to_s3(s3_filename):
     s3_client = boto3.client('s3')

@@ -4,6 +4,7 @@ After=network.target
 
 [Service]
 Environment="AWS_CONFIG_FILE=/home/aerotract/.aws/credentials"
+EnvironmentFile=/home/aerotract/software/AerotractDatabase/env.sh
 ExecStart=/home/aerotract/miniconda3/envs/web/bin/python3 /home/aerotract/software/DatabaseBackupService/database_backup.py
 Restart=always
 RestartSec=10
