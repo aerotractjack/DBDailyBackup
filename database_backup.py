@@ -15,5 +15,7 @@ if __name__ == "__main__":
         filename = datetime.now().strftime("%Y_%m_%d_%H_%M") + ".db_backup"
         upload_db_to_s3(filename)
         print(filename)
+        print("sleeping for a day...")
+        print("=================")
         sys.stdout.flush()
         sleep(24 * 60 * 60)
