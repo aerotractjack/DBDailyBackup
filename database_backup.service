@@ -3,11 +3,10 @@ Description=DB Daily Backup
 After=network.target
 
 [Service]
+User=aerotract
 Environment="AWS_CONFIG_FILE=/home/aerotract/.aws/credentials"
-EnvironmentFile=/home/aerotract/software/AerotractDatabase/env.sh
-ExecStart=/home/aerotract/miniconda3/envs/web/bin/python3 /home/aerotract/software/DatabaseBackupService/database_backup.py
-Restart=always
-RestartSec=10
+ExecStart=/usr/bin/python3 /home/aerotract/software/DBDailyBackup/database_backup.py
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target

@@ -3,6 +3,8 @@ from datetime import datetime
 from time import sleep
 import boto3
 import os
+from dotenv import load_dotenv
+load_dotenv("/home/aerotract/NAS/main/software/db_env.sh")
 
 db_path = os.getenv("DB_DEV_DIR") + "/" + os.getenv("DB_NAME")
 bucket = os.getenv("DB_S3_BACKUP_BUCKET")
