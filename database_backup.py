@@ -15,7 +15,7 @@ def upload_db_to_s3(s3_filename):
 
 if __name__ == "__main__":
     while True:
-        filename = datetime.now().strftime("%Y_%m_%d_%H_%M") + ".db_backup"
+        filename = datetime.now().strftime("%Y_%m_%d_%H_%M") + ".db.bak"
         upload_db_to_s3(filename)
         print(filename)
         print("sleeping for a day...")
