@@ -1,0 +1,10 @@
+[Unit]
+Description=Run DB Daily Backup every 24 hours
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
