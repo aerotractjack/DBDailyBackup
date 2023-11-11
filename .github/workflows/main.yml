@@ -1,4 +1,4 @@
-name: Deploy DataUploadPortal to Jack WS, WS003, WS004 from WS006
+name: Deploy and restart DBDailyBackup
 on:
   push:
     branches:
